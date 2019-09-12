@@ -17,11 +17,18 @@ public class GamePlay : MonoBehaviour
     [SerializeField] GameObject star1;
     [SerializeField] GameObject star2;
     [SerializeField] GameObject star3;
-    
+    [SerializeField] Sprite[] ballSpriteList = new Sprite[12];
+
+    [SerializeField] Ball ball;
+
     private void Awake()
     {
         player = FindObjectOfType<Player>();
         player.LoadPlayer();
+
+        GameObject ballSkin = ball.transform.GetChild(0).gameObject;
+        ballSkin.GetComponent<SpriteRenderer>().sprite = ballSpriteList[player.GetActiveBallSkinIndex()];
+
         levelsData = FindObjectOfType<LevelsData>();
         levelTaps = levelsData.allLevelsTapsAmounts[levelIndex];
     }

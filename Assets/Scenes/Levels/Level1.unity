@@ -519,11 +519,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelsData
       objectReference: {fileID: 0}
-    - target: {fileID: 2917368603067583185, guid: 216b86b7db41a476f9e7b70e79dff790,
-        type: 3}
-      propertyPath: allLevelsTapsAmounts.Array.data[0]
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 3493861390572791012, guid: 216b86b7db41a476f9e7b70e79dff790,
         type: 3}
       propertyPath: m_LocalPosition.x
