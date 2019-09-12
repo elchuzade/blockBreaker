@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GamePlay\GamePlay.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\Paddle.cs" />
     <Compile Include="Assets\Scripts\Levels\LevelsEarnedStars.cs" />
     <Compile Include="Assets\Scripts\Levels\LevelsManager.cs" />
     <Compile Include="Assets\Scripts\Levels\UnlockedLevel.cs" />
