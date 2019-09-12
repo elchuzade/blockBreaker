@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        SetFakePlayerValues();
+        //SetFakePlayerValues();
         player.LoadPlayer();
     }
 

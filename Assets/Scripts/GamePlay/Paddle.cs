@@ -23,6 +23,7 @@ public class Paddle : MonoBehaviour
             }
         }
     }
+
     private void DestroyPaddle()
     {
         Destroy(gameObject, 0.5f);

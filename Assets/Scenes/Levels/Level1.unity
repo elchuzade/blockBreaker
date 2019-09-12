@@ -691,6 +691,83 @@ PrefabInstance:
       propertyPath: starsAmount
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 29746604dae394213a3c202be62e23ec,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cfc104701d1484fac9ff341b2c0cb643,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0fd20811584ad45a3ab6cb9c1faf9f7e,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: e14fd170d33384171b3f63c9fdf829f9,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 86c83bacbe5e145cfb8805398ba4f6e4,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: c579bbe1fac7a4c83b033c0b682c0ce4,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0c94d2e49eb2b4c1a88fd0071b8218bc,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a44fb1731c694c81b3438b3ed0aa895,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: d60932fc9508f4c44bb560a632630b5f,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 55ff138f5ce444f22bb3f7127fe9a709,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: 21af15df4591e4e6c84d740394e68dc8,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ballSpriteList.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: 22e72ce68902041ca94910b97a6c3f06,
+        type: 3}
+    - target: {fileID: 1564073270278130038, guid: 2783b445466de463cb912cd1a59b0492,
+        type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 6560835166367571506}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2783b445466de463cb912cd1a59b0492, type: 3}
 --- !u!1 &1985594711580738827 stripped

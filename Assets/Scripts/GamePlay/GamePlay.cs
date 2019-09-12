@@ -12,6 +12,7 @@ public class GamePlay : MonoBehaviour
     public int levelTaps;
     public int starsAmount;
     private int totalCoins;
+    private int levelCoins;
     [SerializeField] Text tapsText;
     [SerializeField] Text coinsText;
     [SerializeField] GameObject star1;
@@ -20,6 +21,8 @@ public class GamePlay : MonoBehaviour
     [SerializeField] Sprite[] ballSpriteList = new Sprite[12];
 
     [SerializeField] Ball ball;
+
+    private int breakableBlocks;
 
     private void Awake()
     {
@@ -46,10 +49,30 @@ public class GamePlay : MonoBehaviour
         showStars();
     }
 
+    public void BlockDestroyed()
+    {
+        breakableBlocks--;
+        if (breakableBlocks <= 0)
+        {
+            // Passed the levels load win scene
+            Debug.Log("won level!!!");
+        }
+    }
+
+    public void AddCoins()
+    {
+        levelCoins++;
+    }
+
+    public void CountBreakableBlocks()
+    {
+        breakableBlocks++;
+    }
+
     public void showScorePanel()
     {
         tapsText.text = levelTaps.ToString();
-        coinsText.text = player.GetTotalCoins().ToString();
+        coinsText.text = (player.GetTotalCoins()+levelCoins).ToString();
     }
 
     public void showStars()
@@ -86,7 +109,7 @@ public class GamePlay : MonoBehaviour
 
     public void TouchedPaddle()
     {
-        starsAmount = 2;
+        starsAmount--;
         levelTaps = levelsData.allLevelsTapsAmounts[levelIndex];
     }
 
