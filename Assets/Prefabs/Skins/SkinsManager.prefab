@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &412492838515361540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412492838515361546}
+  - component: {fileID: 412492838515361547}
+  m_Layer: 0
+  m_Name: SkinsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412492838515361546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412492838515361540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 674.3144, y: 1730.4526, z: -1410.4911}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &412492838515361547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412492838515361540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 339dc338cb2874f09aa6c063c5142b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball1: {fileID: 21300000, guid: 29746604dae394213a3c202be62e23ec, type: 3}
+  ball2: {fileID: 21300000, guid: cfc104701d1484fac9ff341b2c0cb643, type: 3}
+  ball3: {fileID: 21300000, guid: 0fd20811584ad45a3ab6cb9c1faf9f7e, type: 3}
+  ball4: {fileID: 21300000, guid: e14fd170d33384171b3f63c9fdf829f9, type: 3}
+  ball5: {fileID: 21300000, guid: 86c83bacbe5e145cfb8805398ba4f6e4, type: 3}
+  ball6: {fileID: 21300000, guid: c579bbe1fac7a4c83b033c0b682c0ce4, type: 3}
+  ball7: {fileID: 21300000, guid: 0c94d2e49eb2b4c1a88fd0071b8218bc, type: 3}
+  ball8: {fileID: 21300000, guid: 3a44fb1731c694c81b3438b3ed0aa895, type: 3}
+  ball9: {fileID: 21300000, guid: d60932fc9508f4c44bb560a632630b5f, type: 3}
+  ball10: {fileID: 21300000, guid: 55ff138f5ce444f22bb3f7127fe9a709, type: 3}
+  ball11: {fileID: 21300000, guid: 21af15df4591e4e6c84d740394e68dc8, type: 3}
+  ball12: {fileID: 21300000, guid: 22e72ce68902041ca94910b97a6c3f06, type: 3}
+  player: {fileID: 6187979348209221876, guid: e000298b17abb4ef7ad44a6fb237e536, type: 3}
+  Skin: {fileID: 5573285975064305408, guid: 656c48657fab648c4baa27a8c3f299cc, type: 3}
+  Content: {fileID: 0}
