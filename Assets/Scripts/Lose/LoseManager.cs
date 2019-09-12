@@ -12,8 +12,26 @@ public class LoseManager : MonoBehaviour
     private void Awake()
     {
         player = FindObjectOfType<Player>();
+        // Debug
+        player.LoadPlayer();
+        player.SetLastLevelCoins(20);
+        player.SavePlayer();
+        // Debug
         player.LoadPlayer();
         levelCoins = player.GetLastLevelCoins();
+    }
 
+    private void Update()
+    {
+        loseScoreText.text = (player.GetTotalCoins() + levelCoins).ToString();
+        Invoke("DecreaseLevelCoins", 1f);
+    }
+
+    private void DecreaseLevelCoins()
+    {
+        if(levelCoins > 0)
+        {
+            levelCoins--;
+        }
     }
 }
