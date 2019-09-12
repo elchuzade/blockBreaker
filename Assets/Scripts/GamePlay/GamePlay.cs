@@ -42,7 +42,7 @@ public class GamePlay : MonoBehaviour
         ballSkin.GetComponent<SpriteRenderer>().sprite = ballSpriteList[player.GetActiveBallSkinIndex()];
 
         levelsData = FindObjectOfType<LevelsData>();
-        levelTaps = levelsData.allLevelsTapsAmounts[levelIndex];
+        RefreshLevelTapsWithoutStarCharge();
     }
 
     // Start is called before the first frame update
@@ -127,7 +127,7 @@ public class GamePlay : MonoBehaviour
 
     public void RefreshTaps()
     {
-        levelTaps = levelsData.allLevelsTapsAmounts[levelIndex];
+        RefreshLevelTapsWithoutStarCharge();
         starsAmount--;
     }
 
@@ -141,7 +141,9 @@ public class GamePlay : MonoBehaviour
         } else
         {
             // Lose the game take to the lose window
-            Debug.Log("Lost");
+            player.SetLastLevelCoins(levelCoins);
+            player.SavePlayer();
+            SceneManager.LoadScene("LoseScene");
         }
     }
 
@@ -160,7 +162,13 @@ public class GamePlay : MonoBehaviour
     public void ReceiveExtraTaps()
     {
         tapsReceived = true;
+        RefreshLevelTapsWithoutStarCharge();
         extraTaps.SetActive(false);
         ball.readyToTap = true;
+    }
+
+    public void RefreshLevelTapsWithoutStarCharge()
+    {
+        levelTaps = levelsData.allLevelsTapsAmounts[levelIndex];
     }
 }

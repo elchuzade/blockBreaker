@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Levels\LevelsManager.cs" />
     <Compile Include="Assets\Scripts\Levels\UnlockedLevel.cs" />
     <Compile Include="Assets\Scripts\LevelsData.cs" />
+    <Compile Include="Assets\Scripts\Lose\LoseManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MainMenu\MainMenuOptions.cs" />
     <Compile Include="Assets\Scripts\Maps\MapsEarnedStars.cs" />

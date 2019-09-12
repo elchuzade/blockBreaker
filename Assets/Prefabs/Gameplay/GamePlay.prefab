@@ -64,3 +64,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 21af15df4591e4e6c84d740394e68dc8, type: 3}
   - {fileID: 21300000, guid: 22e72ce68902041ca94910b97a6c3f06, type: 3}
   ball: {fileID: 0}
+  extraTaps: {fileID: 0}
+  extraTapsTimerDigit: {fileID: 0}

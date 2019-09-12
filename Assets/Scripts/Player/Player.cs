@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     private int[] ballSkins = { 0 };
     private int activeMapIndex;
     private int activeLevelIndex;
+    private int lastLevelCoins;
 
     public void SavePlayer()
     {
@@ -107,5 +108,14 @@ public class Player : MonoBehaviour
     }
     public int GetActiveBallSkinIndex() {
         return activeBallSkinIndex;
+    }
+    // Set Last level coins
+    public void SetLastLevelCoins(int coins)
+    {
+        lastLevelCoins = coins;
+    }
+    public int GetLastLevelCoins()
+    {
+        return lastLevelCoins;
     }
 }
