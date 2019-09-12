@@ -9,7 +9,7 @@ public class GamePlay : MonoBehaviour
     LevelsData levelsData;
     Player player;
     private int levelIndex;
-    private int levelTaps;
+    public int levelTaps;
     public int starsAmount;
     private int totalCoins;
     [SerializeField] Text tapsText;
@@ -60,6 +60,11 @@ public class GamePlay : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OneTapUsed()
+    {
+        levelTaps--;
     }
 
     public void TouchedPaddle()
