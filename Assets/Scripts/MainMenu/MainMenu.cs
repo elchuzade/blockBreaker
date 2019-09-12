@@ -39,7 +39,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayNextLevel()
     {
-        Debug.Log("Launching next level");
+        SceneManager.LoadScene("Level1");
 
     }
     public void OpenMaps()

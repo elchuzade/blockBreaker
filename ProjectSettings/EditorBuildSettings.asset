@@ -21,12 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Skins.unity
     guid: 7c5f82e59e0464b88bb0a5d620c87da8
   - enabled: 1
-    path: Assets/Scenes/Levels/Level20.unity
+    path: Assets/Scenes/Levels/Level1.unity
     guid: af6fca3e8cee44dcbabbc61eab19a7d1
   - enabled: 1
-    path: Assets/Scenes/Levels/Level21.unity
+    path: Assets/Scenes/Levels/Level2.unity
     guid: 3d7170aa58b5946fc979710ce143b7ae
   - enabled: 1
-    path: Assets/Scenes/Levels/Level22.unity
+    path: Assets/Scenes/Levels/Level3.unity
     guid: f694b277ea4254b1a9b0d586a03016a1
   m_configObjects: {}
