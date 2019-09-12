@@ -22,7 +22,16 @@ public class GamePlay : MonoBehaviour
 
     [SerializeField] Ball ball;
 
+    [SerializeField] GameObject extraTaps;
+
+    [SerializeField] Text extraTapsTimerDigit;
+
     private int breakableBlocks;
+    private bool extraTapsUsed;
+    private float timer;
+    private int secondsToDecideExtraTaps = 5;
+    private bool tapsReceived;
+
 
     private void Awake()
     {
@@ -47,6 +56,10 @@ public class GamePlay : MonoBehaviour
     {
         showScorePanel();
         showStars();
+        if (extraTapsUsed && !tapsReceived)
+        {
+            CountDownExtraTaps();
+        }
     }
 
     public void BlockDestroyed()
@@ -107,12 +120,6 @@ public class GamePlay : MonoBehaviour
         levelTaps--;
     }
 
-    public void TouchedPaddle()
-    {
-        starsAmount--;
-        levelTaps = levelsData.allLevelsTapsAmounts[levelIndex];
-    }
-
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -122,5 +129,38 @@ public class GamePlay : MonoBehaviour
     {
         levelTaps = levelsData.allLevelsTapsAmounts[levelIndex];
         starsAmount--;
+    }
+
+    public void Lost()
+    {
+        if (!extraTapsUsed)
+        {
+            // Give extra life
+            extraTapsUsed = true;
+            extraTaps.SetActive(true);
+        } else
+        {
+            // Lose the game take to the lose window
+            Debug.Log("Lost");
+        }
+    }
+
+    public void CountDownExtraTaps()
+    {
+        timer += Time.deltaTime;
+        int seconds = (int)(timer % 60);
+        int timeLeft = secondsToDecideExtraTaps - seconds;
+        extraTapsTimerDigit.text = timeLeft.ToString();
+        if (timeLeft == 0)
+        {
+            Lost();
+        }
+    }
+
+    public void ReceiveExtraTaps()
+    {
+        tapsReceived = true;
+        extraTaps.SetActive(false);
+        ball.readyToTap = true;
     }
 }
