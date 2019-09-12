@@ -24,12 +24,28 @@ public class GamePlay : MonoBehaviour
         player.LoadPlayer();
         levelsData = FindObjectOfType<LevelsData>();
         levelTaps = levelsData.allLevelsTapsAmounts[levelIndex];
-        tapsText.text = levelTaps.ToString();
-        coinsText.text = player.GetTotalCoins().ToString();
     }
 
     // Start is called before the first frame update
     void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        showScorePanel();
+        showStars();
+    }
+
+    public void showScorePanel()
+    {
+        tapsText.text = levelTaps.ToString();
+        coinsText.text = player.GetTotalCoins().ToString();
+    }
+
+    public void showStars()
     {
         switch (starsAmount)
         {
@@ -56,12 +72,6 @@ public class GamePlay : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OneTapUsed()
     {
         levelTaps--;
@@ -78,10 +88,9 @@ public class GamePlay : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    
-
     public void RefreshTaps()
     {
         levelTaps = levelsData.allLevelsTapsAmounts[levelIndex];
+        starsAmount--;
     }
 }

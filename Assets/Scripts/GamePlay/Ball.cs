@@ -28,12 +28,12 @@ public class Ball : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow) && gamePlay.levelTaps > 0)
         {
-            ballRigidBody.velocity = (Vector2.up + Vector2.right) * tapForce;
+            ballRigidBody.velocity = Vector2.up * tapForce * 2 + Vector2.right * tapForce;
             gamePlay.OneTapUsed();
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) && gamePlay.levelTaps > 0)
         {
-            ballRigidBody.velocity = (Vector2.up - Vector2.right) * tapForce;
+            ballRigidBody.velocity = Vector2.up * tapForce * 2 - Vector2.right * tapForce;
             gamePlay.OneTapUsed();
         }
     }
