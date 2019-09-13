@@ -143,8 +143,11 @@ public class WinManager : MonoBehaviour
         player.SetTotalCoins(totalCoins);
         player.SetNextLevelIndex(player.GetNextLevelIndex() + 1);
 
-        resultantLevelCoins = levelCoins * levelMultiplier;
-        totalCoins += resultantLevelCoins;
+        if (resultantLevelCoins > 0)
+        {
+            resultantLevelCoins = levelCoins * levelMultiplier;
+            totalCoins += resultantLevelCoins;
+        }
 
         player.SetTotalCoins(totalCoins);
         AddLevelToPassedLevels();
@@ -170,8 +173,11 @@ public class WinManager : MonoBehaviour
         player.SetTotalCoins(totalCoins);
         player.SetNextLevelIndex(passedLevelIndex + 1);
 
-        resultantLevelCoins = levelCoins * levelMultiplier;
-        totalCoins += resultantLevelCoins;
+        if (resultantLevelCoins > 0)
+        {
+            resultantLevelCoins = levelCoins * levelMultiplier;
+            totalCoins += resultantLevelCoins;
+        }
 
         player.SetTotalCoins(totalCoins);
         AddLevelToPassedLevels();
