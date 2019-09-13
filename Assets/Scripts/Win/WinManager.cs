@@ -67,7 +67,6 @@ public class WinManager : MonoBehaviour
         }
     }
 
-
     private void ShowStars()
     {
         switch (levelStars)
@@ -141,6 +140,7 @@ public class WinManager : MonoBehaviour
     public void ReturnToMainMenu()
     {
         player.SetTotalCoins(totalCoins);
+        AddLevelToPassedLevels();
         player.SetNextLevelIndex(player.GetNextLevelIndex() + 1);
 
         if (resultantLevelCoins > 0)
@@ -150,7 +150,6 @@ public class WinManager : MonoBehaviour
         }
 
         player.SetTotalCoins(totalCoins);
-        AddLevelToPassedLevels();
 
         player.SavePlayer();
         SceneManager.LoadScene("MainMenu");
@@ -158,14 +157,28 @@ public class WinManager : MonoBehaviour
 
     private void AddLevelToPassedLevels()
     {
-        int[] passedLevelsWithStars = player.GetPassedLevelsWithStars();
-        int[] passedLevelsWithStarsPlus = new int[passedLevelsWithStars.Length + 1];
-        for (int i = 0; i < passedLevelsWithStars.Length; i++)
+        if (player.GetNextLevelIndex() > player.GetPassedLevelsWithStars().Length)
         {
-            passedLevelsWithStarsPlus[i] = passedLevelsWithStars[i];
+            // This is a new level passed
+            int[] passedLevelsWithStars = player.GetPassedLevelsWithStars();
+            int[] passedLevelsWithStarsPlus = new int[passedLevelsWithStars.Length + 1];
+            for (int i = 0; i < passedLevelsWithStars.Length; i++)
+            {
+                passedLevelsWithStarsPlus[i] = passedLevelsWithStars[i];
+            }
+            passedLevelsWithStarsPlus[passedLevelsWithStarsPlus.Length - 1] = levelStars;
+            player.SetPassedLevelsWithStars(passedLevelsWithStarsPlus);
+        } else
+        {
+            int[] passedLevelsWithStars = player.GetPassedLevelsWithStars();
+            // This is a repeated level passed
+            if (passedLevelsWithStars[player.GetNextLevelIndex() - 1] < levelStars)
+            {
+                passedLevelsWithStars[player.GetNextLevelIndex() - 1] = levelStars;
+                player.SetPassedLevelsWithStars(passedLevelsWithStars);
+            }
         }
-        passedLevelsWithStarsPlus[passedLevelsWithStarsPlus.Length - 1] = levelStars;
-        player.SetPassedLevelsWithStars(passedLevelsWithStarsPlus);
+        
 
     }
     public void PlayNextLevel()
