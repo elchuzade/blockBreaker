@@ -26,12 +26,13 @@ public class Player : MonoBehaviour
         PlayerData data = SaveSystem.LoadPlayer();
 
         activeMapIndex = data.activeMapIndex;
-        activeLevelIndex = data.activeLevelIndex;
+        nextLevelIndex = data.nextLevelIndex;
         totalCoins = data.totalCoins;
         totalDiamonds = data.totalDiamonds;
         activeBallSkinIndex = data.activeBallSkinIndex;
         passedLevelsWithStars = data.passedLevelsWithStars;
         ballSkins = data.ballSkins;
+        lastLevelCoins = data.lastLevelCoins;
     }
     // Active Map Index
     public void SetActiveMapIndex(int index)
@@ -42,14 +43,14 @@ public class Player : MonoBehaviour
     {
         return activeMapIndex;
     }
-    // Active Level Index
-    public void SetActiveLevelIndex(int index)
+    // Next Level Index
+    public void SetNextLevelIndex(int index)
     {
-        activeLevelIndex = index;
+        nextLevelIndex = index;
     }
-    public int GetActiveLevelIndex()
+    public int GetNextLevelIndex()
     {
-        return activeLevelIndex;
+        return nextLevelIndex;
     }
     // Total Coins
     public void SetTotalCoins(int coins)
@@ -82,15 +83,6 @@ public class Player : MonoBehaviour
     public int GetPassedLevelsWithStarsLength()
     {
         return passedLevelsWithStars.Length;
-    }
-    // Next level index
-    public void SetNextLevelIndex(int index)
-    {
-        nextLevelIndex = index;
-    }
-    public int GetNextLevelIndex()
-    {
-        return nextLevelIndex;
     }
     // Balls skins
     public void SetBallSkins(int[] skins)

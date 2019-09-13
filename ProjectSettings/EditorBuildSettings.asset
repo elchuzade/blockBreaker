@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Skins.unity
     guid: 7c5f82e59e0464b88bb0a5d620c87da8
   - enabled: 1
+    path: Assets/Scenes/LoseScene.unity
+    guid: 3e212eb2b91834fcdad9f6cf2effcab0
+  - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: af6fca3e8cee44dcbabbc61eab19a7d1
   - enabled: 1

@@ -78,4 +78,16 @@ public class Ball : MonoBehaviour
             gamePlay.Lost();
         }
     }
+
+    public void ToggleCollisionOption()
+    {
+        if (gameObject.GetComponent<CircleCollider2D>().enabled)
+        {
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        } else
+        {
+            gameObject.GetComponent<CircleCollider2D>().enabled = true;
+        }
+        
+    }
 }

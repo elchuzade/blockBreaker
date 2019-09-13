@@ -45,13 +45,6 @@ public class GamePlay : MonoBehaviour
         RefreshLevelTapsWithoutStarCharge();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         showScorePanel();
@@ -138,6 +131,7 @@ public class GamePlay : MonoBehaviour
             // Give extra life
             extraTapsUsed = true;
             extraTaps.SetActive(true);
+            ball.ToggleCollisionOption();
         } else
         {
             // Lose the game take to the lose window
@@ -165,6 +159,7 @@ public class GamePlay : MonoBehaviour
         RefreshLevelTapsWithoutStarCharge();
         extraTaps.SetActive(false);
         ball.readyToTap = true;
+        ball.ToggleCollisionOption();
     }
 
     public void RefreshLevelTapsWithoutStarCharge()

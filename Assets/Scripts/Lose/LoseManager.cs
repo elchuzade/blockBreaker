@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LoseManager : MonoBehaviour
 {
@@ -33,5 +34,15 @@ public class LoseManager : MonoBehaviour
         {
             levelCoins--;
         }
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void RetryLevel()
+    {
+        SceneManager.LoadScene("Level"+player.GetNextLevelIndex());
     }
 }

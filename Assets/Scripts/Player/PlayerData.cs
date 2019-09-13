@@ -13,7 +13,7 @@ public class PlayerData
 	public int[] passedLevelsWithStars;
 	public int[] ballSkins;
     public int activeMapIndex;
-    public int activeLevelIndex;
+    public int lastLevelCoins;
 
     public PlayerData(Player player)
 	{
@@ -24,7 +24,7 @@ public class PlayerData
         activeBallSkinIndex = player.GetActiveBallSkinIndex();
         nextLevelIndex = player.GetNextLevelIndex();
         activeMapIndex = player.GetActiveMapIndex();
-        activeLevelIndex = player.GetActiveLevelIndex();
+        lastLevelCoins = player.GetLastLevelCoins();
     }
 }
 
