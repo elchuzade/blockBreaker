@@ -1548,6 +1548,11 @@ PrefabInstance:
       objectReference: {fileID: 6258933099993109524}
     - target: {fileID: 7172860060419861006, guid: a35ac2940c01f45f798af56afad58e83,
         type: 3}
+      propertyPath: levelStarsText
+      value: 
+      objectReference: {fileID: 6258933099993109524}
+    - target: {fileID: 7172860060419861006, guid: a35ac2940c01f45f798af56afad58e83,
+        type: 3}
       propertyPath: star1
       value: 
       objectReference: {fileID: 1911898095429150138}
@@ -1566,11 +1571,6 @@ PrefabInstance:
       propertyPath: adButton
       value: 
       objectReference: {fileID: 2080960163}
-    - target: {fileID: 7172860060419861006, guid: a35ac2940c01f45f798af56afad58e83,
-        type: 3}
-      propertyPath: levelStarsText
-      value: 
-      objectReference: {fileID: 6258933099993109524}
     - target: {fileID: 7172860060419861006, guid: a35ac2940c01f45f798af56afad58e83,
         type: 3}
       propertyPath: collectButton
