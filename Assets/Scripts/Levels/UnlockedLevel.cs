@@ -13,8 +13,8 @@ public class UnlockedLevel : MonoBehaviour
     {
         player.LoadPlayer();
         int levelIndex = player.GetActiveMapIndex() * 10 + index;
-        player.SetNextLevelIndex(index);
+        player.SetNextLevelIndex(levelIndex + 1);
         player.SavePlayer();
-        SceneManager.LoadScene("Level" + levelIndex);
+        SceneManager.LoadScene("Level" + (levelIndex + 1));
     }
 }

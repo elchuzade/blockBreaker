@@ -13,11 +13,6 @@ public class LoseManager : MonoBehaviour
     private void Awake()
     {
         player = FindObjectOfType<Player>();
-        // Debug
-        player.LoadPlayer();
-        player.SetLastLevelCoins(20);
-        player.SavePlayer();
-        // Debug
         player.LoadPlayer();
         levelCoins = player.GetLastLevelCoins();
     }

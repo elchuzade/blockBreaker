@@ -32,7 +32,6 @@ public class GamePlay : MonoBehaviour
     private int secondsToDecideExtraTaps = 5;
     private bool tapsReceived;
 
-
     private void Awake()
     {
         player = FindObjectOfType<Player>();
@@ -60,9 +59,17 @@ public class GamePlay : MonoBehaviour
         breakableBlocks--;
         if (breakableBlocks <= 0)
         {
-            // Passed the levels load win scene
-            Debug.Log("won level!!!");
+            Win();
         }
+    }
+
+    private void Win()
+    {
+        // Passed the levels load win scene
+        player.SetLastLevelCoins(levelCoins);
+        player.SetLastLevelStars(starsAmount);
+        player.SavePlayer();
+        SceneManager.LoadScene("WinMenu");
     }
 
     public void AddCoins()
@@ -137,7 +144,7 @@ public class GamePlay : MonoBehaviour
             // Lose the game take to the lose window
             player.SetLastLevelCoins(levelCoins);
             player.SavePlayer();
-            SceneManager.LoadScene("LoseScene");
+            SceneManager.LoadScene("LoseMenu");
         }
     }
 

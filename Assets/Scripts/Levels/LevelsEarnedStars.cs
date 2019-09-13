@@ -16,9 +16,9 @@ public class LevelsEarnedStars : MonoBehaviour
     {
         player.LoadPlayer();
         mapIndex = player.GetActiveMapIndex();
-        for(int i = mapIndex*10; i < (mapIndex+1)*10; i++)
+        for(int i = mapIndex * 10; i < (mapIndex + 1) * 10; i++)
         {
-            if (i < player.GetPassedLevelsWithStars().Length)
+            if (i < player.GetPassedLevelsWithStarsLength())
             {
                 earnedStars += player.GetPassedLevelsWithStars()[i];
             } else

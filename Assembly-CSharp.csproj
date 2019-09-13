@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\ScorePanel.cs" />
     <Compile Include="Assets\Scripts\Skins\SkinButton.cs" />
     <Compile Include="Assets\Scripts\Skins\SkinsManager.cs" />
+    <Compile Include="Assets\Scripts\Win\WinManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/kamranelchuzade/Desktop/unity/course testing/Eggs/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

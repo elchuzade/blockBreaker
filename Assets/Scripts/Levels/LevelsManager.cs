@@ -23,11 +23,13 @@ public class LevelsManager : MonoBehaviour
         player.LoadPlayer();
         mapIndex = player.GetActiveMapIndex();
         levelsWithStars = new int[10];
-        for (int i = mapIndex*10; i < (mapIndex+1)*10; i++)
+        Debug.Log(player.GetPassedLevelsWithStarsLength());
+
+        for (int i = mapIndex * 10; i < (mapIndex + 1) * 10; i++)
         {
             if (i < player.GetPassedLevelsWithStarsLength())
             {
-                levelsWithStars[i%10] = player.GetPassedLevelsWithStars()[i];
+                levelsWithStars[i % 10] = player.GetPassedLevelsWithStars()[i];
             } else
             {
                 if (firstNonPassedLevel)
@@ -38,7 +40,6 @@ public class LevelsManager : MonoBehaviour
                 {
                     levelsWithStars[i % 10] = -1;
                 }
-                
             }
         }
     }

@@ -8,27 +8,30 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] Player player;
 
-    private void SetFakePlayerValues()
+    public void SetFakePlayerValues()
     {
-        player.SetTotalCoins(1600);
-        player.SetTotalDiamonds(50);
-        int[] passedLevelsList = { 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
+        player.SetTotalCoins(0);
+        player.SetTotalDiamonds(0);
+        player.SetNextLevelIndex(1);
+        player.SetMaxLevelPassed(0);
+        int[] passedLevelsList = { };
         player.SetPassedLevelsWithStars(passedLevelsList);
         int[] ballSkins = { 0 };
         player.SetBallSkins(ballSkins);
         player.SetActiveBallSkinIndex(0);
         player.SavePlayer();
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void Awake()
     {
-        //SetFakePlayerValues();
         player.LoadPlayer();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("next level - " + player.GetNextLevelIndex());
     }
 
     // Update is called once per frame
@@ -39,7 +42,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayNextLevel()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level" + player.GetNextLevelIndex());
 
     }
     public void OpenMaps()

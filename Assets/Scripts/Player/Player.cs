@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    private int totalCoins = 90;
-    private int totalStars;
-    private int totalDiamonds = 30;
+    private int totalCoins;
+    private int lastLevelStars;
+    private int totalDiamonds;
     private int activeBallSkinIndex;
     private int nextLevelIndex = 1;
-    private int[] passedLevelsWithStars = { 3, 2, 3, 1, 3, 3, 1, 3, 3, 3, 1, 2, 3, 3, 2, 1, 1, 2, 2, 1, 3, 1, 2, 3, 1};
+    private int[] passedLevelsWithStars;
     private int[] ballSkins = { 0 };
     private int activeMapIndex;
     private int activeLevelIndex;
     private int lastLevelCoins;
+    private int maxLevelPassed;
 
     public void SavePlayer()
     {
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
     {
         PlayerData data = SaveSystem.LoadPlayer();
 
+        lastLevelStars = data.lastLevelStars;
         activeMapIndex = data.activeMapIndex;
         nextLevelIndex = data.nextLevelIndex;
         totalCoins = data.totalCoins;
@@ -33,6 +35,7 @@ public class Player : MonoBehaviour
         passedLevelsWithStars = data.passedLevelsWithStars;
         ballSkins = data.ballSkins;
         lastLevelCoins = data.lastLevelCoins;
+        maxLevelPassed = data.maxLevelPassed;
     }
     // Active Map Index
     public void SetActiveMapIndex(int index)
@@ -101,7 +104,7 @@ public class Player : MonoBehaviour
     public int GetActiveBallSkinIndex() {
         return activeBallSkinIndex;
     }
-    // Set Last level coins
+    // Last level coins
     public void SetLastLevelCoins(int coins)
     {
         lastLevelCoins = coins;
@@ -109,5 +112,23 @@ public class Player : MonoBehaviour
     public int GetLastLevelCoins()
     {
         return lastLevelCoins;
+    }
+    // Last level stars
+    public void SetLastLevelStars(int stars)
+    {
+        lastLevelStars = stars;
+    }
+    public int GetLastLevelStars()
+    {
+        return lastLevelStars;
+    }
+    // Max level passed
+    public void SetMaxLevelPassed(int maxLevel)
+    {
+        maxLevelPassed = maxLevel;
+    }
+    public int GetMaxLevelPassed()
+    {
+        return maxLevelPassed;
     }
 }
