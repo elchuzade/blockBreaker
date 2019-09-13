@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
         player.SetTotalCoins(0);
         player.SetTotalDiamonds(0);
         player.SetNextLevelIndex(1);
-        player.SetMaxLevelPassed(0);
+        player.SetMaxLevelPassed(1);
         int[] passedLevelsList = { };
         player.SetPassedLevelsWithStars(passedLevelsList);
         int[] ballSkins = { 0 };
@@ -28,21 +28,9 @@ public class MainMenu : MonoBehaviour
         player.LoadPlayer();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("next level - " + player.GetNextLevelIndex());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PlayNextLevel()
     {
-        SceneManager.LoadScene("Level" + player.GetNextLevelIndex());
+        SceneManager.LoadScene("Level" + player.GetMaxLevelPassed());
 
     }
     public void OpenMaps()

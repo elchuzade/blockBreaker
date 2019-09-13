@@ -139,7 +139,6 @@ public class WinManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        player.SetTotalCoins(totalCoins);
         AddLevelToPassedLevels();
         player.SetNextLevelIndex(player.GetNextLevelIndex() + 1);
 
@@ -150,6 +149,11 @@ public class WinManager : MonoBehaviour
         }
 
         player.SetTotalCoins(totalCoins);
+
+        if (player.GetMaxLevelPassed() < player.GetNextLevelIndex())
+        {
+            player.SetMaxLevelPassed(player.GetNextLevelIndex());
+        }
 
         player.SavePlayer();
         SceneManager.LoadScene("MainMenu");
@@ -183,7 +187,7 @@ public class WinManager : MonoBehaviour
     }
     public void PlayNextLevel()
     {
-        player.SetTotalCoins(totalCoins);
+        AddLevelToPassedLevels();
         player.SetNextLevelIndex(passedLevelIndex + 1);
 
         if (resultantLevelCoins > 0)
@@ -193,7 +197,11 @@ public class WinManager : MonoBehaviour
         }
 
         player.SetTotalCoins(totalCoins);
-        AddLevelToPassedLevels();
+
+        if (player.GetMaxLevelPassed() < player.GetNextLevelIndex())
+        {
+            player.SetMaxLevelPassed(player.GetNextLevelIndex());
+        }
 
         player.SavePlayer();
         SceneManager.LoadScene("Level" + (passedLevelIndex + 1));
